@@ -1,6 +1,10 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
+#import <AppCenterReactNative.h>
+#import <AppCenterReactNativeCrashes.h>
+#import <AppCenterReactNativeAnalytics.h>
 
 @implementation AppDelegate
 
@@ -16,6 +20,9 @@
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
+  [AppCenterReactNative register];
+  [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+  [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
   return [self getBundleURL];
 }
 
