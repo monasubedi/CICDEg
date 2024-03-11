@@ -6,7 +6,8 @@ import Analytics from 'appcenter-analytics'
 const App = () => {
     return (
         <View style={styles.center}>
-            <Button title='Track event' onPress={() => Analytics.trackEvent('test')} />
+            {/* <Button title='Track event' onPress={() => Analytics.trackEvent('test')} /> */}
+            <Text>Hello</Text>
         </View>
     )
 }
